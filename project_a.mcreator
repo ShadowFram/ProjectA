@@ -44,7 +44,7 @@
       "name": "HardcoreMechanic",
       "type": "procedure",
       "sortid": 1,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "hardcore_mechanic",
       "metadata": {
@@ -57,14 +57,13 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Systems/Lifes"
+      }
     },
     {
       "name": "PlayerStartedLivesWhenJoin",
       "type": "procedure",
       "sortid": 2,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "player_started_lives_when_join",
       "metadata": {
@@ -77,14 +76,13 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Systems/Lifes"
+      }
     },
     {
       "name": "WorldGenerated",
       "type": "procedure",
       "sortid": 3,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "world_generated",
       "metadata": {
@@ -109,8 +107,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Systems/Lifes"
+      }
     },
     {
       "name": "LightFeet",
