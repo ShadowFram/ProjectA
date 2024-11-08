@@ -1,6 +1,13 @@
 {
   "mod_elements": [],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Speed_count_modifier",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {}
@@ -25,7 +32,16 @@
         "children": [
           {
             "name": "Skills",
-            "children": []
+            "children": [
+              {
+                "name": "Speed_skill",
+                "children": []
+              },
+              {
+                "name": "Strength_skill",
+                "children": []
+              }
+            ]
           }
         ]
       }
