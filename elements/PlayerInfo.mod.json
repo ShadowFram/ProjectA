@@ -25,7 +25,7 @@
           "entityModel": {
             "name": "PlayerShowProc"
           },
-          "scale": 60,
+          "scale": 55,
           "rotationX": 0,
           "followMouseMovement": false,
           "x": 152,

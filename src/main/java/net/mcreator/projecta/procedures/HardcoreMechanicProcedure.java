@@ -68,6 +68,14 @@ public class HardcoreMechanicProcedure {
 					_player.displayClientMessage(Component.literal(((Component.translatable("LiveWarningText").getString() + "") + ""
 							+ (new java.text.DecimalFormat("##.##").format((entity.getCapability(ProjectAModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ProjectAModVariables.PlayerVariables())).Count_Lives) + ""))), false);
 			}
+			{
+				double _setval = 1;
+				entity.getCapability(ProjectAModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Level = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			PlayerXPWantUpdateProcedure.execute(entity);
 		}
 	}
 }

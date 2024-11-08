@@ -26,8 +26,8 @@ public class PlayerXPWantUpdateProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = (entity.getCapability(ProjectAModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ProjectAModVariables.PlayerVariables())).XP_to_level_up + 30
-					+ (entity.getCapability(ProjectAModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ProjectAModVariables.PlayerVariables())).Level * 1.5;
+			double _setval = (entity.getCapability(ProjectAModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ProjectAModVariables.PlayerVariables())).XP_to_level_up
+					* (entity.getCapability(ProjectAModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ProjectAModVariables.PlayerVariables())).Level * 0.5 + 30;
 			entity.getCapability(ProjectAModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.XP_to_level_up = _setval;
 				capability.syncPlayerVariables(entity);

@@ -115,6 +115,7 @@
     {
       "name": "LightFeet",
       "type": "potioneffect",
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_feet",
@@ -128,6 +129,7 @@
     {
       "name": "PlayerInfo",
       "type": "gui",
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "player_info",
@@ -253,6 +255,7 @@
     {
       "name": "GuiOpen",
       "type": "keybind",
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gui_open",
@@ -328,6 +331,7 @@
     {
       "name": "Onexpdudes",
       "type": "tag",
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "onexpdudes",
@@ -361,6 +365,133 @@
         ]
       },
       "path": "~/Systems/Player/XPDrop"
+    },
+    {
+      "name": "CharacteristicUpgrade",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "characteristic_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/CharacteristicUpgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Player/Level upgrade u"
+    },
+    {
+      "name": "GiveLevels",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_levels",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/GiveLevelsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Commands"
+    },
+    {
+      "name": "GiveMeLevels",
+      "type": "command",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_me_levels",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/command/GiveMeLevelsCommand.java"
+        ]
+      },
+      "path": "~/Systems/Commands"
+    },
+    {
+      "name": "TestEntityDies",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/TestEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Test",
+      "type": "livingentity",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/project_a/models/item/test_spawn_egg.json",
+          "src/main/java/net/mcreator/projecta/client/renderer/TestRenderer.java",
+          "src/main/resources/data/project_a/forge/biome_modifier/test_biome_modifier.json",
+          "src/main/java/net/mcreator/projecta/entity/TestEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "GetMyltiplyProc",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_myltiply_proc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/GetMyltiplyProcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Commands"
+    },
+    {
+      "name": "Getmultiply",
+      "type": "command",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getmultiply",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/command/GetmultiplyCommand.java"
+        ]
+      },
+      "path": "~/Systems/Commands"
     }
   ],
   "variable_elements": [
@@ -413,19 +544,23 @@
       "key.project_a.gui_open": "Gui Open",
       "LiveText": "Количество ваших жизней: ",
       "gui.project_a.player_info.label_name": "Name:",
+      "item.project_a.test_spawn_egg": "Test Spawn Egg",
       "gui.project_a.player_info.label_xp": "XP:",
       "LiveWarningText": "Внимание вы потеряли жизнь! У вас осталось жизней: ",
       "effect.project_a.light_feet": "lightfleet",
-      "gui.project_a.player_info.label_level": "Level: "
+      "gui.project_a.player_info.label_level": "Level: ",
+      "entity.project_a.test": "Test"
     },
     "en_us": {
       "key.project_a.gui_open": "Gui Open",
       "LiveText": "Your live count: ",
       "gui.project_a.player_info.label_name": "Name:",
+      "item.project_a.test_spawn_egg": "Test Spawn Egg",
       "gui.project_a.player_info.label_xp": "XP:",
       "LiveWarningText": "Warning! You lose 1 life! Lives remain: ",
       "effect.project_a.light_feet": "lightfleet",
-      "gui.project_a.player_info.label_level": "Level: "
+      "gui.project_a.player_info.label_level": "Level: ",
+      "entity.project_a.test": "Test"
     }
   },
   "foldersRoot": {
@@ -469,8 +604,16 @@
               {
                 "name": "XPDrop",
                 "children": []
+              },
+              {
+                "name": "Level upgrade u",
+                "children": []
               }
             ]
+          },
+          {
+            "name": "Commands",
+            "children": []
           }
         ]
       },

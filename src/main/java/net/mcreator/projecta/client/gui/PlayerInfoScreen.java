@@ -44,7 +44,7 @@ public class PlayerInfoScreen extends AbstractContainerScreen<PlayerInfoMenu> {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		if (PlayerShowProcProcedure.execute(world, x, y, z) instanceof LivingEntity livingEntity) {
-			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + -52, this.topPos + 3, 60, 0f, 0, livingEntity);
+			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + -52, this.topPos + 3, 55, 0f, 0, livingEntity);
 		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}

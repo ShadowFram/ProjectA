@@ -61,6 +61,8 @@ public class XPDropProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
+			CharacteristicUpgradeProcedure.execute(sourceentity);
+			PlayerXPWantUpdateProcedure.execute(entity);
 		}
 	}
 }
