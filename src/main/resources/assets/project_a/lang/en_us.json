@@ -1,1 +1,5 @@
-{}
+{
+  "LiveText": "Your live count: ",
+  "LiveWarningText": "Warning! You lose 1 life! Lives remain: ",
+  "effect.project_a.light_feet": "lightfleet"
+}
