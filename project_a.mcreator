@@ -73,100 +73,6 @@
       "path": "~/Systems/World"
     },
     {
-      "name": "LightFootEffectStartedApplied",
-      "type": "procedure",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "light_foot_effect_started_applied",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/projecta/procedures/LightFootEffectStartedAppliedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Systems/Skills/Light_foot_skill"
-    },
-    {
-      "name": "LightFootEffectExpires",
-      "type": "procedure",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "light_foot_effect_expires",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/projecta/procedures/LightFootEffectExpiresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Systems/Skills/Light_foot_skill"
-    },
-    {
-      "name": "LightFooteffect",
-      "type": "potioneffect",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "light_footeffect",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/projecta/potion/LightFooteffectMobEffect.java"
-        ]
-      },
-      "path": "~/Systems/Skills/Light_foot_skill"
-    },
-    {
-      "name": "StrengtheningEffect_Startedapplied",
-      "type": "procedure",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strengthening_effect_startedapplied",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/projecta/procedures/StrengtheningEffect_StartedappliedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Systems/Skills/Strength_skill"
-    },
-    {
-      "name": "StrengtheningEffect_Expires",
-      "type": "procedure",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strengthening_effect_expires",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/projecta/procedures/StrengtheningEffect_ExpiresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Systems/Skills/Strength_skill"
-    },
-    {
       "name": "Strengthening",
       "type": "potioneffect",
       "sortid": 10,
@@ -181,15 +87,39 @@
       "path": "~/Systems/Skills/Strength_skill"
     },
     {
-      "name": "StrengthGain",
+      "name": "LightFootgain",
       "type": "procedure",
-      "sortid": 12,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "strength_gain",
+      "registry_name": "light_footgain",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/projecta/procedures/StrengthGainProcedure.java"
+          "src/main/java/net/mcreator/projecta/procedures/LightFootgainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Light_foot_skill"
+    },
+    {
+      "name": "StrengtheningEffect_Expires",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strengthening_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/StrengtheningEffect_ExpiresProcedure.java"
         ],
         "dependencies": [
           {
@@ -215,21 +145,15 @@
       "path": "~/Systems/Skills/Strength_skill"
     },
     {
-      "name": "LightFootgain",
-      "type": "procedure",
-      "sortid": 13,
+      "name": "LightFooteffect",
+      "type": "potioneffect",
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "light_footgain",
+      "registry_name": "light_footeffect",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/projecta/procedures/LightFootgainProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/net/mcreator/projecta/potion/LightFooteffectMobEffect.java"
         ]
       },
       "path": "~/Systems/Skills/Light_foot_skill"
@@ -247,6 +171,423 @@
         ]
       },
       "path": "~/Systems/Skills/Light_foot_skill"
+    },
+    {
+      "name": "LightFootEffectExpires",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_foot_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/LightFootEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Light_foot_skill"
+    },
+    {
+      "name": "StrengtheningEffect_Startedapplied",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strengthening_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/StrengtheningEffect_StartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Strength_skill"
+    },
+    {
+      "name": "LightFootEffectStartedApplied",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_foot_effect_started_applied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/LightFootEffectStartedAppliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Light_foot_skill"
+    },
+    {
+      "name": "StrengthGain",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strength_gain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/StrengthGainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Strength_skill"
+    },
+    {
+      "name": "PlayerShowProc",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_show_proc",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/PlayerShowProcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "TestEntityDies",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/TestEntityDiesProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "XPWantShow",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_want_show",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/XPWantShowProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "GiveLevels",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_levels",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/GiveLevelsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Systems/Commands"
+    },
+    {
+      "name": "Onexpdudes",
+      "type": "tag",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "onexpdudes",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/entity_types/onexpdudes.json"
+        ]
+      },
+      "path": "~/Systems/Player/XPDrop"
+    },
+    {
+      "name": "GiveMeLevels",
+      "type": "command",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_me_levels",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/command/GiveMeLevelsCommand.java"
+        ]
+      },
+      "path": "~/Systems/Commands"
+    },
+    {
+      "name": "GuiOpen",
+      "type": "keybind",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/network/GuiOpenMessage.java"
+        ]
+      },
+      "path": "~/Systems/KeyBinds"
+    },
+    {
+      "name": "PlayerXPWantUpdate",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_xp_want_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/PlayerXPWantUpdateProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Systems/World"
+    },
+    {
+      "name": "XPShow",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_show",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/XPShowProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "CharacteristicUpgrade",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "characteristic_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/CharacteristicUpgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Player/Level upgrade u"
+    },
+    {
+      "name": "GuiOpenOnKeyPressed",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_open_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/GuiOpenOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Systems/KeyBinds"
+    },
+    {
+      "name": "XPDrop",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_drop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/XPDropProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Player/XPDrop"
+    },
+    {
+      "name": "Test",
+      "type": "livingentity",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/client/renderer/TestRenderer.java",
+          "src/main/java/net/mcreator/projecta/entity/TestEntity.java",
+          "src/main/resources/data/project_a/forge/biome_modifier/test_biome_modifier.json",
+          "src/main/resources/assets/project_a/models/item/test_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "PlayerNameShow",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_name_show",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/PlayerNameShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "PlayerInfo",
+      "type": "gui",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_info",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/client/gui/PlayerInfoScreen.java",
+          "src/main/java/net/mcreator/projecta/world/inventory/PlayerInfoMenu.java"
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "LevelShow",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_show",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/LevelShowProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "Getmultiply",
+      "type": "command",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getmultiply",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/command/GetmultiplyCommand.java"
+        ]
+      },
+      "path": "~/Systems/Commands"
+    },
+    {
+      "name": "GetMyltiplyProc",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_myltiply_proc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/GetMyltiplyProcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Commands"
     }
   ],
   "variable_elements": [
@@ -269,35 +610,56 @@
       "value": "false"
     },
     {
-      "name": "Speed_count_modifier",
+      "name": "Strength_count_modifier",
       "type": "number",
       "scope": "player_lifetime",
       "value": "1.0"
     },
     {
-      "name": "Strength_count_modifier",
+      "name": "Current_XP",
       "type": "number",
-      "scope": "player_lifetime",
+      "scope": "player_persistent",
       "value": "1.0"
+    },
+    {
+      "name": "XP_to_level_up",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "10.0"
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "Speed_count_modifier",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "ru_ru": {
-      "effect.project_a.strengthening": "Sthengthening",
-      "key.project_a.strkey": "STRKEY",
       "LiveText": "Количество ваших жизней: ",
-      "effect.project_a.light_footeffect": "lightfoot",
-      "key.project_a.lfkey": "LFKEY",
       "LiveWarningText": "Внимание вы потеряли жизнь! У вас осталось жизней: "
     },
     "en_us": {
-      "effect.project_a.strengthening": "Sthengthening",
-      "key.project_a.strkey": "STRKEY",
       "LiveText": "Your live count: ",
+      "gui.project_a.player_info.label_name": "Name:",
+      "item.project_a.test_spawn_egg": "Test Spawn Egg",
       "effect.project_a.light_footeffect": "lightfoot",
+      "LiveWarningText": "Warning! You lose 1 life! Lives remain: ",
+      "effect.project_a.light_feet": "lightfleet",
+      "gui.project_a.player_info.label_level": "Level: ",
+      "effect.project_a.strengthening": "Sthengthening",
+      "key.project_a.gui_open": "Gui Open",
+      "key.project_a.strkey": "STRKEY",
+      "gui.project_a.player_info.label_xp": "XP:",
       "key.project_a.lfkey": "LFKEY",
-      "LiveWarningText": "Warning! You lose 1 life! Lives remain: "
+      "entity.project_a.test": "Test"
     }
   },
   "foldersRoot": {

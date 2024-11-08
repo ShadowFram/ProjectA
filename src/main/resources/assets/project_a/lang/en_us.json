@@ -1,8 +1,15 @@
 {
-  "effect.project_a.strengthening": "Sthengthening",
-  "key.project_a.strkey": "STRKEY",
   "LiveText": "Your live count: ",
+  "gui.project_a.player_info.label_name": "Name:",
+  "item.project_a.test_spawn_egg": "Test Spawn Egg",
   "effect.project_a.light_footeffect": "lightfoot",
+  "LiveWarningText": "Warning! You lose 1 life! Lives remain: ",
+  "effect.project_a.light_feet": "lightfleet",
+  "gui.project_a.player_info.label_level": "Level: ",
+  "effect.project_a.strengthening": "Sthengthening",
+  "key.project_a.gui_open": "Gui Open",
+  "key.project_a.strkey": "STRKEY",
+  "gui.project_a.player_info.label_xp": "XP:",
   "key.project_a.lfkey": "LFKEY",
-  "LiveWarningText": "Warning! You lose 1 life! Lives remain: "
+  "entity.project_a.test": "Test"
 }

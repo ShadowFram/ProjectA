@@ -1,22 +1,11 @@
 
 package net.mcreator.projecta.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-
-import net.mcreator.projecta.procedures.StrengthGainProcedure;
 import net.mcreator.projecta.ProjectAMod;
-
-import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class STRKEYMessage {
+
 	int type, pressedms;
 
 	public STRKEYMessage(int type, int pressedms) {
@@ -47,17 +36,21 @@ public class STRKEYMessage {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
+
 		if (type == 0) {
 
-			StrengthGainProcedure.execute(entity);
+			StrengthGainProcedure.execute();
 		}
+
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		ProjectAMod.addNetworkMessage(STRKEYMessage.class, STRKEYMessage::buffer, STRKEYMessage::new, STRKEYMessage::handler);
 	}
+
 }

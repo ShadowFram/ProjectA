@@ -29,7 +29,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.projecta.init.ProjectAModTabs;
 import net.mcreator.projecta.init.ProjectAModMobEffects;
+import net.mcreator.projecta.init.ProjectAModMenus;
+import net.mcreator.projecta.init.ProjectAModItems;
+import net.mcreator.projecta.init.ProjectAModEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -49,8 +53,14 @@ public class ProjectAMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		ProjectAModItems.REGISTRY.register(bus);
+		ProjectAModEntities.REGISTRY.register(bus);
+
+		ProjectAModTabs.REGISTRY.register(bus);
+
 		ProjectAModMobEffects.REGISTRY.register(bus);
 
+		ProjectAModMenus.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

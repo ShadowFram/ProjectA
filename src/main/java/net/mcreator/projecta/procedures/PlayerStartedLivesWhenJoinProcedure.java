@@ -41,7 +41,7 @@ public class PlayerStartedLivesWhenJoinProcedure {
 				});
 			}
 			{
-				boolean _setval = false;
+				boolean _setval = true;
 				entity.getCapability(ProjectAModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Player = _setval;
 					capability.syncPlayerVariables(entity);
