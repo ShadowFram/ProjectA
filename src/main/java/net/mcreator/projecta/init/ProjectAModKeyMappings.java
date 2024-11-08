@@ -15,39 +15,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-import net.mcreator.projecta.network.STRKEYMessage;
-import net.mcreator.projecta.network.LFKEYMessage;
 import net.mcreator.projecta.network.GuiOpenMessage;
 import net.mcreator.projecta.ProjectAMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class ProjectAModKeyMappings {
-	public static final KeyMapping LFKEY = new KeyMapping("key.project_a.lfkey", GLFW.GLFW_KEY_X, "key.categories.misc") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				ProjectAMod.PACKET_HANDLER.sendToServer(new LFKEYMessage(0, 0));
-				LFKEYMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
-	public static final KeyMapping STRKEY = new KeyMapping("key.project_a.strkey", GLFW.GLFW_KEY_Z, "key.categories.misc") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				ProjectAMod.PACKET_HANDLER.sendToServer(new STRKEYMessage(0, 0));
-				STRKEYMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
 	public static final KeyMapping GUI_OPEN = new KeyMapping("key.project_a.gui_open", GLFW.GLFW_KEY_0, "key.categories.project_a") {
 		private boolean isDownOld = false;
 
@@ -64,8 +36,6 @@ public class ProjectAModKeyMappings {
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
-		event.register(LFKEY);
-		event.register(STRKEY);
 		event.register(GUI_OPEN);
 	}
 
@@ -74,8 +44,6 @@ public class ProjectAModKeyMappings {
 		@SubscribeEvent
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
-				LFKEY.consumeClick();
-				STRKEY.consumeClick();
 				GUI_OPEN.consumeClick();
 			}
 		}
