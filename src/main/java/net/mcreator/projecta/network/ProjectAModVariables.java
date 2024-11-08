@@ -84,6 +84,10 @@ public class ProjectAModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.Player = original.Player;
 			clone.Count_Lives = original.Count_Lives;
+			clone.Speed_count_modifier = original.Speed_count_modifier;
+			clone.Level = original.Level;
+			clone.Current_XP = original.Current_XP;
+			clone.XP_to_level_up = original.XP_to_level_up;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -152,7 +156,6 @@ public class ProjectAModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "project_a_mapvars";
 		public boolean WorldLoaded = false;
-		public double Speed_count_modifier = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -162,13 +165,11 @@ public class ProjectAModVariables {
 
 		public void read(CompoundTag nbt) {
 			WorldLoaded = nbt.getBoolean("WorldLoaded");
-			Speed_count_modifier = nbt.getDouble("Speed_count_modifier");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("WorldLoaded", WorldLoaded);
-			nbt.putDouble("Speed_count_modifier", Speed_count_modifier);
 			return nbt;
 		}
 
@@ -263,6 +264,10 @@ public class ProjectAModVariables {
 	public static class PlayerVariables {
 		public boolean Player = false;
 		public double Count_Lives = 0;
+		public double Speed_count_modifier = 0;
+		public double Level = 1.0;
+		public double Current_XP = 1.0;
+		public double XP_to_level_up = 10.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -273,6 +278,10 @@ public class ProjectAModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("Player", Player);
 			nbt.putDouble("Count_Lives", Count_Lives);
+			nbt.putDouble("Speed_count_modifier", Speed_count_modifier);
+			nbt.putDouble("Level", Level);
+			nbt.putDouble("Current_XP", Current_XP);
+			nbt.putDouble("XP_to_level_up", XP_to_level_up);
 			return nbt;
 		}
 
@@ -280,6 +289,10 @@ public class ProjectAModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			Player = nbt.getBoolean("Player");
 			Count_Lives = nbt.getDouble("Count_Lives");
+			Speed_count_modifier = nbt.getDouble("Speed_count_modifier");
+			Level = nbt.getDouble("Level");
+			Current_XP = nbt.getDouble("Current_XP");
+			XP_to_level_up = nbt.getDouble("XP_to_level_up");
 		}
 	}
 
@@ -315,6 +328,10 @@ public class ProjectAModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Player = message.data.Player;
 					variables.Count_Lives = message.data.Count_Lives;
+					variables.Speed_count_modifier = message.data.Speed_count_modifier;
+					variables.Level = message.data.Level;
+					variables.Current_XP = message.data.Current_XP;
+					variables.XP_to_level_up = message.data.XP_to_level_up;
 				}
 			});
 			context.setPacketHandled(true);

@@ -124,6 +124,243 @@
         ]
       },
       "path": "~/Systems/Skills"
+    },
+    {
+      "name": "PlayerInfo",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_info",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/client/gui/PlayerInfoScreen.java",
+          "src/main/java/net/mcreator/projecta/world/inventory/PlayerInfoMenu.java"
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "PlayerShowProc",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_show_proc",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/PlayerShowProcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "PlayerNameShow",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_name_show",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/PlayerNameShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "LevelShow",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_show",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/LevelShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "GuiOpenOnKeyPressed",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_open_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/GuiOpenOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Systems/KeyBinds"
+    },
+    {
+      "name": "GuiOpen",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gui_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/network/GuiOpenMessage.java"
+        ]
+      },
+      "path": "~/Systems/KeyBinds"
+    },
+    {
+      "name": "XPShow",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_show",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/XPShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "XPWantShow",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_want_show",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/XPWantShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/PlayerInfo/PlayerInfoGui"
+    },
+    {
+      "name": "PlayerXPWantUpdate",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_xp_want_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/PlayerXPWantUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/World"
+    },
+    {
+      "name": "Onexpdudes",
+      "type": "tag",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "onexpdudes",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/entity_types/onexpdudes.json"
+        ]
+      },
+      "path": "~/Systems/Player/XPDrop"
+    },
+    {
+      "name": "XPDrop",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_drop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/XPDropProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Player/XPDrop"
     }
   ],
   "variable_elements": [
@@ -148,21 +385,47 @@
     {
       "name": "Speed_count_modifier",
       "type": "number",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "Current_XP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "XP_to_level_up",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "10.0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "ru_ru": {
+      "key.project_a.gui_open": "Gui Open",
       "LiveText": "Количество ваших жизней: ",
+      "gui.project_a.player_info.label_name": "Name:",
+      "gui.project_a.player_info.label_xp": "XP:",
       "LiveWarningText": "Внимание вы потеряли жизнь! У вас осталось жизней: ",
-      "effect.project_a.light_feet": "lightfleet"
+      "effect.project_a.light_feet": "lightfleet",
+      "gui.project_a.player_info.label_level": "Level: "
     },
     "en_us": {
+      "key.project_a.gui_open": "Gui Open",
       "LiveText": "Your live count: ",
+      "gui.project_a.player_info.label_name": "Name:",
+      "gui.project_a.player_info.label_xp": "XP:",
       "LiveWarningText": "Warning! You lose 1 life! Lives remain: ",
-      "effect.project_a.light_feet": "lightfleet"
+      "effect.project_a.light_feet": "lightfleet",
+      "gui.project_a.player_info.label_level": "Level: "
     }
   },
   "foldersRoot": {
@@ -195,6 +458,19 @@
           {
             "name": "Lives",
             "children": []
+          },
+          {
+            "name": "KeyBinds",
+            "children": []
+          },
+          {
+            "name": "Player",
+            "children": [
+              {
+                "name": "XPDrop",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -204,7 +480,17 @@
       },
       {
         "name": "GUI",
-        "children": []
+        "children": [
+          {
+            "name": "PlayerInfo",
+            "children": [
+              {
+                "name": "PlayerInfoGui",
+                "children": []
+              }
+            ]
+          }
+        ]
       }
     ]
   },

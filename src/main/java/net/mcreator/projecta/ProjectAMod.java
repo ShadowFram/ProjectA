@@ -30,6 +30,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.projecta.init.ProjectAModMobEffects;
+import net.mcreator.projecta.init.ProjectAModMenus;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -51,6 +52,7 @@ public class ProjectAMod {
 
 		ProjectAModMobEffects.REGISTRY.register(bus);
 
+		ProjectAModMenus.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

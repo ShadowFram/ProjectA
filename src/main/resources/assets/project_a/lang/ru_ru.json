@@ -1,5 +1,9 @@
 {
+  "key.project_a.gui_open": "Gui Open",
   "LiveText": "Количество ваших жизней: ",
+  "gui.project_a.player_info.label_name": "Name:",
+  "gui.project_a.player_info.label_xp": "XP:",
   "LiveWarningText": "Внимание вы потеряли жизнь! У вас осталось жизней: ",
-  "effect.project_a.light_feet": "lightfleet"
+  "effect.project_a.light_feet": "lightfleet",
+  "gui.project_a.player_info.label_level": "Level: "
 }
