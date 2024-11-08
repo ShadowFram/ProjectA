@@ -1,5 +1,8 @@
 {
+  "effect.project_a.strengthening": "Sthengthening",
+  "key.project_a.strkey": "STRKEY",
   "LiveText": "Your live count: ",
-  "LiveWarningText": "Warning! You lose 1 life! Lives remain: ",
-  "effect.project_a.light_feet": "lightfleet"
+  "effect.project_a.light_footeffect": "lightfoot",
+  "key.project_a.lfkey": "LFKEY",
+  "LiveWarningText": "Warning! You lose 1 life! Lives remain: "
 }

@@ -85,6 +85,8 @@ public class ProjectAModVariables {
 			clone.Player = original.Player;
 			clone.Count_Lives = original.Count_Lives;
 			if (!event.isWasDeath()) {
+				clone.Speed_count_modifier = original.Speed_count_modifier;
+				clone.Strength_count_modifier = original.Strength_count_modifier;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -152,7 +154,6 @@ public class ProjectAModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "project_a_mapvars";
 		public boolean WorldLoaded = false;
-		public double Speed_count_modifier = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -162,13 +163,11 @@ public class ProjectAModVariables {
 
 		public void read(CompoundTag nbt) {
 			WorldLoaded = nbt.getBoolean("WorldLoaded");
-			Speed_count_modifier = nbt.getDouble("Speed_count_modifier");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("WorldLoaded", WorldLoaded);
-			nbt.putDouble("Speed_count_modifier", Speed_count_modifier);
 			return nbt;
 		}
 
@@ -263,6 +262,8 @@ public class ProjectAModVariables {
 	public static class PlayerVariables {
 		public boolean Player = false;
 		public double Count_Lives = 0;
+		public double Speed_count_modifier = 1.0;
+		public double Strength_count_modifier = 1.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -273,6 +274,8 @@ public class ProjectAModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("Player", Player);
 			nbt.putDouble("Count_Lives", Count_Lives);
+			nbt.putDouble("Speed_count_modifier", Speed_count_modifier);
+			nbt.putDouble("Strength_count_modifier", Strength_count_modifier);
 			return nbt;
 		}
 
@@ -280,6 +283,8 @@ public class ProjectAModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			Player = nbt.getBoolean("Player");
 			Count_Lives = nbt.getDouble("Count_Lives");
+			Speed_count_modifier = nbt.getDouble("Speed_count_modifier");
+			Strength_count_modifier = nbt.getDouble("Strength_count_modifier");
 		}
 	}
 
@@ -315,6 +320,8 @@ public class ProjectAModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Player = message.data.Player;
 					variables.Count_Lives = message.data.Count_Lives;
+					variables.Speed_count_modifier = message.data.Speed_count_modifier;
+					variables.Strength_count_modifier = message.data.Strength_count_modifier;
 				}
 			});
 			context.setPacketHandled(true);

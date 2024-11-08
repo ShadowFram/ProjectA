@@ -73,15 +73,15 @@
       "path": "~/Systems/World"
     },
     {
-      "name": "LightFeetEffectStartedapplied",
+      "name": "LightFootEffectStartedApplied",
       "type": "procedure",
-      "sortid": 4,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "light_feet_effect_startedapplied",
+      "registry_name": "light_foot_effect_started_applied",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/projecta/procedures/LightFeetEffectStartedappliedProcedure.java"
+          "src/main/java/net/mcreator/projecta/procedures/LightFootEffectStartedAppliedProcedure.java"
         ],
         "dependencies": [
           {
@@ -90,18 +90,18 @@
           }
         ]
       },
-      "path": "~/Systems/Skills"
+      "path": "~/Systems/Skills/Light_foot_skill"
     },
     {
-      "name": "LightFeetEffectExpires",
+      "name": "LightFootEffectExpires",
       "type": "procedure",
-      "sortid": 5,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "light_feet_effect_expires",
+      "registry_name": "light_foot_effect_expires",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/projecta/procedures/LightFeetEffectExpiresProcedure.java"
+          "src/main/java/net/mcreator/projecta/procedures/LightFootEffectExpiresProcedure.java"
         ],
         "dependencies": [
           {
@@ -110,20 +110,143 @@
           }
         ]
       },
-      "path": "~/Systems/Skills"
+      "path": "~/Systems/Skills/Light_foot_skill"
     },
     {
-      "name": "LightFeet",
+      "name": "LightFooteffect",
       "type": "potioneffect",
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "light_feet",
+      "registry_name": "light_footeffect",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/projecta/potion/LightFeetMobEffect.java"
+          "src/main/java/net/mcreator/projecta/potion/LightFooteffectMobEffect.java"
         ]
       },
-      "path": "~/Systems/Skills"
+      "path": "~/Systems/Skills/Light_foot_skill"
+    },
+    {
+      "name": "StrengtheningEffect_Startedapplied",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strengthening_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/StrengtheningEffect_StartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Strength_skill"
+    },
+    {
+      "name": "StrengtheningEffect_Expires",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strengthening_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/StrengtheningEffect_ExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Strength_skill"
+    },
+    {
+      "name": "Strengthening",
+      "type": "potioneffect",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strengthening",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/potion/StrengtheningMobEffect.java"
+        ]
+      },
+      "path": "~/Systems/Skills/Strength_skill"
+    },
+    {
+      "name": "StrengthGain",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strength_gain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/StrengthGainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Strength_skill"
+    },
+    {
+      "name": "STRKEY",
+      "type": "keybind",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strkey",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/network/STRKEYMessage.java"
+        ]
+      },
+      "path": "~/Systems/Skills/Strength_skill"
+    },
+    {
+      "name": "LightFootgain",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_footgain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/LightFootgainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills/Light_foot_skill"
+    },
+    {
+      "name": "LFKEY",
+      "type": "keybind",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lfkey",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/network/LFKEYMessage.java"
+        ]
+      },
+      "path": "~/Systems/Skills/Light_foot_skill"
     }
   ],
   "variable_elements": [
@@ -148,21 +271,33 @@
     {
       "name": "Speed_count_modifier",
       "type": "number",
-      "scope": "map",
-      "value": "0"
+      "scope": "player_lifetime",
+      "value": "1.0"
+    },
+    {
+      "name": "Strength_count_modifier",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "1.0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "ru_ru": {
+      "effect.project_a.strengthening": "Sthengthening",
+      "key.project_a.strkey": "STRKEY",
       "LiveText": "Количество ваших жизней: ",
-      "LiveWarningText": "Внимание вы потеряли жизнь! У вас осталось жизней: ",
-      "effect.project_a.light_feet": "lightfleet"
+      "effect.project_a.light_footeffect": "lightfoot",
+      "key.project_a.lfkey": "LFKEY",
+      "LiveWarningText": "Внимание вы потеряли жизнь! У вас осталось жизней: "
     },
     "en_us": {
+      "effect.project_a.strengthening": "Sthengthening",
+      "key.project_a.strkey": "STRKEY",
       "LiveText": "Your live count: ",
-      "LiveWarningText": "Warning! You lose 1 life! Lives remain: ",
-      "effect.project_a.light_feet": "lightfleet"
+      "effect.project_a.light_footeffect": "lightfoot",
+      "key.project_a.lfkey": "LFKEY",
+      "LiveWarningText": "Warning! You lose 1 life! Lives remain: "
     }
   },
   "foldersRoot": {
@@ -183,7 +318,7 @@
                 "children": []
               },
               {
-                "name": "Speed_skill",
+                "name": "Light_foot_skill",
                 "children": []
               }
             ]

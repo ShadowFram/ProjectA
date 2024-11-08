@@ -10,10 +10,12 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
-import net.mcreator.projecta.potion.LightFeetMobEffect;
+import net.mcreator.projecta.potion.StrengtheningMobEffect;
+import net.mcreator.projecta.potion.LightFooteffectMobEffect;
 import net.mcreator.projecta.ProjectAMod;
 
 public class ProjectAModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, ProjectAMod.MODID);
-	public static final RegistryObject<MobEffect> LIGHT_FEET = REGISTRY.register("light_feet", () -> new LightFeetMobEffect());
+	public static final RegistryObject<MobEffect> STRENGTHENING = REGISTRY.register("strengthening", () -> new StrengtheningMobEffect());
+	public static final RegistryObject<MobEffect> LIGHT_FOOTEFFECT = REGISTRY.register("light_footeffect", () -> new LightFooteffectMobEffect());
 }

@@ -2,8 +2,8 @@
   "_fv": 57,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "lightfleet",
-    "icon": "sss.png",
+    "effectName": "Sthengthening",
+    "icon": "light_footeffect.png",
     "color": {
       "value": -1,
       "falpha": 0.0
@@ -14,10 +14,10 @@
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "onStarted": {
-      "name": "LightFeetEffectStartedapplied"
+      "name": "StrengtheningEffect_Startedapplied"
     },
     "onExpired": {
-      "name": "LightFeetEffectExpires"
+      "name": "StrengtheningEffect_Expires"
     }
   }
 }

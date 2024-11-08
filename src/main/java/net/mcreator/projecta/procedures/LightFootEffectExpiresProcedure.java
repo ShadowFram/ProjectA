@@ -5,7 +5,7 @@ import net.minecraft.world.entity.Entity;
 
 import java.util.UUID;
 
-public class LightFeetEffectExpiresProcedure {
+public class LightFootEffectExpiresProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
