@@ -152,6 +152,7 @@ public class ProjectAModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "project_a_mapvars";
 		public boolean WorldLoaded = false;
+		public double Speed_count_modifier = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -161,11 +162,13 @@ public class ProjectAModVariables {
 
 		public void read(CompoundTag nbt) {
 			WorldLoaded = nbt.getBoolean("WorldLoaded");
+			Speed_count_modifier = nbt.getDouble("Speed_count_modifier");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("WorldLoaded", WorldLoaded);
+			nbt.putDouble("Speed_count_modifier", Speed_count_modifier);
 			return nbt;
 		}
 

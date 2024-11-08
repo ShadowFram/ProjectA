@@ -70,7 +70,7 @@
           }
         ]
       },
-      "path": "~/Systems/World"
+      "path": "~/Systems/Lifes"
     },
     {
       "name": "LightFeetEffectStartedapplied",
@@ -144,6 +144,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "Speed_count_modifier",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -163,15 +169,7 @@
     "name": "~",
     "children": [
       {
-        "name": "GUI",
-        "children": []
-      },
-      {
         "name": "Items",
-        "children": []
-      },
-      {
-        "name": "Blocks",
         "children": []
       },
       {
@@ -179,17 +177,26 @@
         "children": [
           {
             "name": "Skills",
-            "children": []
-          },
-          {
-            "name": "Lifes",
-            "children": []
-          },
-          {
-            "name": "World",
-            "children": []
+            "children": [
+              {
+                "name": "Strength_skill",
+                "children": []
+              },
+              {
+                "name": "Speed_skill",
+                "children": []
+              }
+            ]
           }
         ]
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "GUI",
+        "children": []
       }
     ]
   },

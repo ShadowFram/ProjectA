@@ -1,10 +1,8 @@
 package net.mcreator.projecta.procedures;
 
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import java.util.UUID;
+import javax.annotation.Nullable;
 
 public class LightFeetEffectStartedappliedProcedure {
 	public static void execute(Entity entity) {
