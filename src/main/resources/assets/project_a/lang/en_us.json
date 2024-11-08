@@ -1,1 +1,4 @@
-{}
+{
+  "LiveText": "Your live count: ",
+  "LiveWarningText": "Warning! You lose 1 life! Lives remain: "
+}

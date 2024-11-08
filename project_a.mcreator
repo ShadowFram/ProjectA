@@ -1,16 +1,167 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "LightFeetEffectExpires",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_feet_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/LightFeetEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills"
+    },
+    {
+      "name": "LightFeetEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_feet_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/LightFeetEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Skills"
+    },
+    {
+      "name": "HardcoreMechanic",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hardcore_mechanic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/HardcoreMechanicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Lifes"
+    },
+    {
+      "name": "PlayerStartedLivesWhenJoin",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_started_lives_when_join",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/PlayerStartedLivesWhenJoinProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Systems/Lifes"
+    },
+    {
+      "name": "WorldGenerated",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_generated",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/procedures/WorldGeneratedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Systems/Lifes"
+    },
+    {
+      "name": "LightFeet",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_feet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/projecta/potion/LightFeetMobEffect.java"
+        ]
+      },
+      "path": "~/Systems/Skills"
+    }
+  ],
   "variable_elements": [
     {
       "name": "Speed_count_modifier",
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "Player",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "WorldLoaded",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "Count_Lives",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "ru_ru": {
+      "LiveText": "Количество ваших жизней: ",
+      "LiveWarningText": "Внимание вы потеряли жизнь! У вас осталось жизней: "
+    },
+    "en_us": {
+      "LiveText": "Your live count: ",
+      "LiveWarningText": "Warning! You lose 1 life! Lives remain: "
+    }
   },
   "foldersRoot": {
     "name": "~",
